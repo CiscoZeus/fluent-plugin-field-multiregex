@@ -2,9 +2,9 @@
 $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name          = "fluent-plugin-fields-autotype"
-  gem.description   = "Fluent output filter plugin for parsing key/value fields in records. Automatically determines type of the value as integer, float or string"
-  gem.homepage      = "https://github.com/CiscoZeus/fluent-plugin-fields-autotype"
+  gem.name          = "fluent-plugin-field-multiregex"
+  gem.description   = "Fluent output plugin for reforming a record using multiple named capture regular expressions"
+  gem.homepage      = "https://github.com/CiscoZeus/fluent-plugin-field-multiregex"
   gem.summary       = gem.description
   gem.version       = File.read("VERSION").strip
   gem.authors       = ["Manoj Sharma"]

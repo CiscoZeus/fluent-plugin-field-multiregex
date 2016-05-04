@@ -13,9 +13,10 @@ Use RubyGems:
 
     <match pattern>
         type                field_multiregex
-
+        parse_key           message
         remove_tag_prefix   raw
         add_tag_prefix      parsed
-        pattern             (\S+)=(\S+)
+        multiline           true
+        pattern1            ^Regular Expression with (?<capture>named captures)$
     </match>
 
