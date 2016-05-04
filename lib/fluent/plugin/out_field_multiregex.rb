@@ -14,7 +14,7 @@ module Fluent
     config_param :remove_tag_prefix,  :string, :default => nil
     config_param :add_tag_prefix,     :string, :default => nil
     config_param :parse_key,          :string, :default => 'message'
-    config_param :multiline,          :string, :default => false
+    config_param :multiline,          :bool,   :default => false
     config_param :pattern1,           :string, :default => nil
     config_param :pattern2,           :string, :default => nil
     config_param :pattern3,           :string, :default => nil
@@ -62,7 +62,7 @@ module Fluent
       source = record[parse_key].to_s
       
       source_arr = []
-      if multiline
+      if !(multiline == false)
         source_arr = source.split( /\r?\n/ )
       else
         source_arr << source
