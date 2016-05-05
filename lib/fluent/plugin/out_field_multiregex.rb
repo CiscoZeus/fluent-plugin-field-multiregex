@@ -59,6 +59,9 @@ module Fluent
     end
 
     def parse_field(record)
+      if (parse_key.nil?) || !(record.key?(parse_key))
+        return record
+      end
       source = record[parse_key].to_s
       
       source_arr = []
